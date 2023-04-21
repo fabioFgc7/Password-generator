@@ -14,6 +14,7 @@ export const ButtonPass = ({
   numbers3,
   symbols4,
   setUppercase,
+  setValuesRange,
 }) => {
   const passwordRandom = (e) => {
     e.preventDefault();
@@ -54,9 +55,8 @@ export const ButtonPass = ({
     // Si no se ha establecido un rango para la longitud de la contraseña, mostrar una alerta
 
     if (valuesRange === 0) {
-      alert(
-        "Pone el rango y los tipos de caracteres que quieres generar la contrasena"
-      );
+      setValuesRange(1);
+      setPassword("S");
     } else {
       setPassword(pass);
     }

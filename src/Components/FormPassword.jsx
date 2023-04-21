@@ -20,12 +20,15 @@ export const FormPassword = () => {
   const textRef = useRef(null);
 
   return (
-    <div className='font-heebot flex flex-col justify-center items-center justify-items-center h-screen  bg-[#0d1a2d] w-full'>
-      <div className='w-1/2'>
+    <div className='font-heebot flex flex-col justify-center items-center md:justify-items-center h-full md:h-screen bg-[#0d1a2d] w-full p-10'>
+      <h1 className='md:text-2xl text-xl mb-5 text-slate-200 font-heebo'>
+        PASSWORD GENERATOR
+      </h1>
+      <div className='md:w-1/2 w-full '>
         <div className='px-6 bg-slate-950 w-auto text-center font-bold p-2 text-slate-100 flex justify-between items-center'>
           <h1
             ref={textRef}
-            className='text-left font-heebo text-clip overflow-hidden text-sm md:text-lg '>
+            className='text-left font-heebo text-clip overflow-hidden text-md md:text-lg '>
             {password}
           </h1>
           <FaCopy
@@ -38,12 +41,14 @@ export const FormPassword = () => {
           className={`h-3  ${bg} rounded-full mt-[1px]`}></div>
       </div>
 
-      <form
-        action=''
-        className='w-1/2  flex flex-col bg-slate-950 text-slate-200 p-10 mt-5'>
+      <form className='md:w-1/2 w-full flex flex-col bg-slate-950 text-slate-200 p-10 mt-5'>
         <div className='flex flex-col space-y-2 '>
-          <div className='flex justify-between'>
-            <label htmlFor='lenght'>Character Length</label>
+          <div className='flex justify-between justify-items-center'>
+            <label
+              className='text-xl font-heebo'
+              htmlFor='lenght'>
+              Character Length
+            </label>
             <span className='text-2xl  text-green-500'>{valuesRange}</span>
           </div>
           <input
@@ -129,6 +134,7 @@ export const FormPassword = () => {
           numbers3={numbers3}
           symbols4={symbols4}
           setUppercase={setUppercase}
+          setValuesRange={setValuesRange}
         />
       </form>
 

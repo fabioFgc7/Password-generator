@@ -3,7 +3,7 @@ import { FormPassword } from "./Components/FormPassword";
 
 function App() {
   return (
-    <div className='App'>
+    <div className='w-full h-full'>
       <FormPassword />
     </div>
   );
